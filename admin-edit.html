@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Редактирование рецепта — Purple Flavor</title>
+
+<link rel="icon" href="assets/favicon.png?v=2">
+    
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+<style>
+
+.editor{
+
+    min-height:600px;
+    outline:none;
+
+}
+
+
+.editor img{
+
+    width:48%;
+    margin:1%;
+    border-radius:20px;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body class="bg-[#FFEEDA] text-[#3A2E52]">
+
+
+<div class="max-w-4xl mx-auto px-4 py-8" class="hidden">
+
+
+<h1 class="text-4xl font-bold mb-8">
+
+✏️ Редактирование рецепта
+
+</h1>
+
+
+
+
+<input
+id="title"
+
+class="
+w-full
+border
+rounded-2xl
+px-5
+py-4
+mb-4
+"
+
+placeholder="Название"
+>
+
+
+
+
+<select
+
+id="category"
+
+class="
+w-full
+border
+rounded-2xl
+px-5
+py-4
+mb-6
+">
+
+
+</select>
+
+
+
+
+
+<div
+
+id="editor"
+
+contenteditable="true"
+
+class="
+editor
+bg-white
+rounded-3xl
+p-6
+text-lg
+">
+
+</div>
+
+
+
+
+
+
+<button
+
+onclick="saveEdit()"
+
+class="
+mt-6
+w-full
+py-5
+bg-[#704E98]
+text-white
+rounded-2xl
+font-bold
+">
+
+💾 Сохранить изменения
+
+</button>
+
+
+
+
+</div>
+
+
+
+<script type="module" src="admin-edit.js"></script>
+
+
+</body>
+
+</html>

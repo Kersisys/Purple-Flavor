@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Админ — Purple Flavor</title>
+<link rel="icon" href="assets/favicon.png?v=2">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body { background-color: #241B33; color: #F3EEFF; }
+    .card { background-color: #33294a; }
+  </style>
+</head>
+<body class="min-h-screen p-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex justify-between items-center mb-10">
+      <h1 class="text-4xl font-bold flex items-center gap-4">
+        <span class="text-5xl">🔧</span> 
+        Админ-панель Purple Flavor
+      </h1>
+      <button onclick="location.reload()" 
+              class="px-6 py-3 bg-[#704E98] hover:bg-[#5a3f7f] text-white rounded-2xl flex items-center gap-3">
+        <i class="fas fa-sync"></i> Обновить
+      </button>
+    </div>
+
+    <!-- На модерации -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 border-b border-[#4a3c6b] pb-3">
+        <i class="fas fa-clock text-yellow-400"></i> 
+        На модерации
+      </h2>
+      <div id="pendingContainer" class="space-y-8"></div>
+    </div>
+
+    <!-- Опубликованные -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 border-b border-[#4a3c6b] pb-3">
+        <i class="fas fa-check-circle text-green-400"></i> 
+        Опубликованные рецепты (<span id="publishedCount">0</span>)
+      </h2>
+      <div id="publishedContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </div>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
